@@ -1,7 +1,7 @@
-Array.prototype.myFilter = function (callback, arr) {
+Array.prototype.myFilter = function (callback, arg) {
   const res = [];
-  if (arr !== undefined) {
-    callback = callback.bind(arr);
+  if (arg !== undefined) {
+    callback = callback.bind(arg);
   }
   for (let i = 0; i < this.length; i++) {
     if (callback(this[i], i, this)) {
