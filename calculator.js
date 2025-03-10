@@ -23,7 +23,7 @@ class Calculator {
   };
   logDiv = () => {
     if (this.y === 0) {
-      throw new Error("Can not devide by zero");
+      throw new Error("Can not divide by zero");
     }
     return this.x / this.y;
   };
