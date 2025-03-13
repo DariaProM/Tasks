@@ -16,4 +16,4 @@ function getPerson(name, age) {
   ];
 }
 
-console.log(getPerson("alice", 10));
+console.log(getPerson("Alice", 10));
