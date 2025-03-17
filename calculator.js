@@ -7,9 +7,15 @@ class Calculator {
     this.y = y;
   }
   setY(num) {
+    if (typeof num !== "number" || isNaN(num)) {
+      throw new Error("Y have to be a number");
+    }
     this.y = num;
   }
   setX(num) {
+    if (typeof num !== "number" || isNaN(num)) {
+      throw new Error("X have to be a number");
+    }
     this.x = num;
   }
   logSum = () => {
@@ -19,18 +25,12 @@ class Calculator {
     return this.x * this.y;
   };
   logSub = () => {
-    return (this.x = this.y);
+    return this.x - this.y;
   };
   logDiv = () => {
     if (this.y === 0) {
-      throw new Error("Can not divide by zero");
+      throw new Error("Can not devide by zero");
     }
     return this.x / this.y;
   };
 }
-
-const calc = new Calculator(10, 5);
-const log = calc.logSum;
-console.log(log());
-calc.x = 20;
-console.log(calc.logSum());
