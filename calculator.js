@@ -34,9 +34,3 @@ class Calculator {
     return this.x / this.y;
   };
 }
-
-const calc = new Calculator(10, 5);
-const log = calc.logSum;
-console.log(log());
-calc.x = 20;
-console.log(calc.logSum());
