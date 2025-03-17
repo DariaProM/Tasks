@@ -10,8 +10,7 @@ class BaseStorage {
     return this.storage.length === 0;
   }
   toArray() {
-    let newArr = [...this.storage];
-    return newArr;
+    return [...this.storage];
   }
 }
 
@@ -21,9 +20,12 @@ class Stack extends BaseStorage {
       throw new Error("Is not iterable!");
     }
     const newStack = new Stack(iterable.length);
-    [...iterable].forEach((el) => {
-      newStack.push(el);
-    });
+    // [...iterable].forEach((el) => {
+    //   newStack.push(el);
+    // });
+    for (let item of iterable) {
+      newStack.push(item);
+    }
     return newStack;
   }
   push(el) {

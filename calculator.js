@@ -7,9 +7,15 @@ class Calculator {
     this.y = y;
   }
   setY(num) {
+    if (typeof num !== "number" || isNaN(num)) {
+      throw new Error("Y have to be a number");
+    }
     this.y = num;
   }
   setX(num) {
+    if (typeof num !== "number" || isNaN(num)) {
+      throw new Error("X have to be a number");
+    }
     this.x = num;
   }
   logSum = () => {
@@ -19,7 +25,7 @@ class Calculator {
     return this.x * this.y;
   };
   logSub = () => {
-    return (this.x = this.y);
+    return this.x - this.y;
   };
   logDiv = () => {
     if (this.y === 0) {
