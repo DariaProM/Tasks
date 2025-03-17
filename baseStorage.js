@@ -52,9 +52,9 @@ class Queue extends BaseStorage {
       throw new Error("Is not iterable!");
     }
     const newQueue = new Queue(iterable.length);
-    [...iterable].forEach((el) => {
-      newQueue.push(el);
-    });
+    for (let item of iterable) {
+      newQueue.push(item);
+    }
     return newQueue;
   }
   push(el) {
