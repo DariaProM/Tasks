@@ -53,7 +53,7 @@ class Queue extends BaseStorage {
     }
     const newQueue = new Queue(iterable.length);
     for (let item of iterable) {
-      newQueue.push(item);
+     newQueue.push(item);
     }
     return newQueue;
   }
