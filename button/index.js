@@ -24,3 +24,8 @@ function removeButton() {
 button.addEventListener("click", () => {
   removeButton();
 });
+button.addEventListener("mouseover", () => {
+  if (Math.random() < 0.5) {
+    removeButton();
+  }
+});
