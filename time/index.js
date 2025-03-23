@@ -5,8 +5,8 @@ const stopButton = document.querySelector(".stop");
 const resetButton = document.querySelector(".reset");
 const resStopwatch = document.querySelector(".count-stopwatch");
 
-const stopwatchTime = 0;
-const stopwatchInterval = null;
+let stopwatchTime = 0;
+let stopwatchInterval = null;
 
 const startStopWatch = () => {
   stopwatchInterval = setInterval(() => {
@@ -21,7 +21,7 @@ const stopWatchEnd = () => {
 const resetStopWatch = () => {
   clearInterval(stopwatchInterval);
   stopwatchTime = 0;
-  resStopwatch.innerText = stopwatchTime;
+  resStopwatch.innerText = 0;
 };
 startButton.addEventListener("click", () => {
   startStopWatch();
@@ -36,8 +36,8 @@ resetButton.addEventListener("click", () => {
 
 // --------------Timer------------------
 
-let input = document.querySelector(".text");
-let resTimer = document.querySelector(".count-timer");
+const input = document.querySelector(".text");
+const resTimer = document.querySelector(".count-timer");
 let stopTimerInterval;
 
 const startTimer = () => {
